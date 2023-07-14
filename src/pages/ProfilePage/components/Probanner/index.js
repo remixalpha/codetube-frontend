@@ -8,24 +8,24 @@ import { getTutorById } from "../../../../utils/api/tutorApi";
 
 
 const Profile = () => {
-  const [tutor, setTutor] = useState(null);
+  // const [tutor, setTutor] = useState(null);
   
-  useEffect(() => {
-    const fetchTutor = async (tutorId) => {
-      try {
-        const response = await getTutorById(tutorId); 
-        setTutor(response.data);
-      } catch (error) {
-        console.log("Failed to fetch tutor:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchTutor = async (tutorId) => {
+  //     try {
+  //       const response = await getTutorById(tutorId); 
+  //       setTutor(response.data);
+  //     } catch (error) {
+  //       console.log("Failed to fetch tutor:", error);
+  //     }
+  //   };
 
-    fetchTutor();
-  }, []);
+  //   fetchTutor();
+  // }, []);
 
-  if (!tutor) {
-    return null; 
-  }
+  // if (!tutor) {
+  //   return null; 
+  // }
   return (
     <Card extra={"items-center  h-full mt-5 ml-5 mr-5 p-[16px] bg-cover"}>
       {/* Background and profile */}
@@ -41,19 +41,19 @@ const Profile = () => {
 
        {/* Name and position */}
        <div className="mt-16 flex flex-col items-center">
-        <h4 className="text-xl font-bold text-navy-700 ">{tutor.name}</h4>
-        <p className="text-base font-normal text-gray-600">{tutor.field}</p>
+        <h4 className="text-xl font-bold text-navy-700 ">Adela</h4>
+        <p className="text-base font-normal text-gray-600">Java Developer</p>
       </div>
 
       {/* Post followers */}
       <div className="mt-6 mb-3 flex gap-4 md:!gap-14">
         <div className="flex flex-col items-center justify-center">
-          <p className="text-2xl font-bold text-navy-700 ">{tutor.postCount}</p>
+          <p className="text-2xl font-bold text-navy-700 ">4</p>
           <p className="text-sm font-normal text-gray-600">Posts</p>
         </div>
         <div className="flex flex-col items-center justify-center">
           <p className="text-2xl font-bold text-navy-700 ">
-            9.7K
+            9K
           </p>
           <p className="text-sm font-normal text-gray-600">Followers</p>
         </div>

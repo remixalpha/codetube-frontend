@@ -8,7 +8,7 @@ import { FiSearch } from "react-icons/fi";
 import Dropdown from "../../../../components/dropdown/index";
 
 
-import avatar from "../../../../assets/img/avatars/avatar1.png";
+import avatar from "../../../../assets/img/avatars/avatar11.png";
 import logo from "../../../../assets/img/covers/figma.png";
 
 import ProfileBanner from "../../../../components/Probanner/minbanner";

@@ -23,7 +23,7 @@ const Videos = () => {
           </div>
           <div className="ml-4">
             <p className="text-base font-medium text-navy-700 ">
-              Technology behind the Blockchain
+              MEARN
             </p>
             <p className="mt-2 text-sm text-gray-600">
               Project #1 .
@@ -48,7 +48,7 @@ const Videos = () => {
           </div>
           <div className="ml-4">
             <p className="text-base font-medium text-navy-700 ">
-              Technology behind the Blockchain
+              Angular
             </p>
             <p className="mt-2 text-sm text-gray-600">
               Project #1 .
@@ -73,7 +73,7 @@ const Videos = () => {
           </div>
           <div className="ml-4">
             <p className="text-base font-medium text-navy-700 ">
-              Technology behind the Blockchain
+              Vit
             </p>
             <p className="mt-2 text-sm text-gray-600">
               Project #1 .

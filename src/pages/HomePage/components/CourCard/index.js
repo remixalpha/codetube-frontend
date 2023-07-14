@@ -28,81 +28,81 @@ const Card = () => {
   };
 
   // Get category cover image
-  const getCategoryCoverImage = (category) => {
-    if (category === "React") {
-      return "../../../../assets/img/covers/react.gif";
-    } else if (category === "Angular") {
-      return "../../../../assets/img/covers/angular.gif";
-    } else if (category === "Vue") {
-      return "../../../../assets/img/covers/vue.gif";
-    }
+  // const getCategoryCoverImage = (category) => {
+  //   if (category === "React") {
+  //     return "../../../../assets/img/covers/react.gif";
+  //   } else if (category === "Angular") {
+  //     return "../../../../assets/img/covers/angular.gif";
+  //   } else if (category === "Vue") {
+  //     return "../../../../assets/img/covers/vue.gif";
+  //   }
     // Add more category cover images as needed
 
     // Default cover image
-    return "../../../../assets/img/covers/default.gif";
-  };
+  //   return "../../../../assets/img/covers/default.gif";
+  // };
 
   //fetching tutor and courses
 
-  useEffect(() => {
-    const fetchTutors = async (tutorId) => {
-      try {
-        const response = await getTutorById(tutorId);
-        setTutors((prevTutors) => [...prevTutors, response.data]);
-      } catch (error) {
-        console.log("Failed to fetch tutors:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchTutors = async (tutorId) => {
+  //     try {
+  //       const response = await getTutorById(tutorId);
+  //       setTutors((prevTutors) => [...prevTutors, response.data]);
+  //     } catch (error) {
+  //       console.log("Failed to fetch tutors:", error);
+  //     }
+  //   };
 
-    const fetchCourses = async () => {
-      try {
-        const response = await getAllCourses();
-        setCourses(response.data);
-        response.data.forEach((course) => {
-          fetchTutors(course.tutorId);
-        });
-      } catch (error) {
-        console.log("Failed to fetch courses:", error);
-      }
-    };
+  //   const fetchCourses = async () => {
+  //     try {
+  //       const response = await getAllCourses();
+  //       setCourses(response.data);
+  //       response.data.forEach((course) => {
+  //         fetchTutors(course.tutorId);
+  //       });
+  //     } catch (error) {
+  //       console.log("Failed to fetch courses:", error);
+  //     }
+  //   };
 
-    fetchCourses();
-  }, []);
+  //   fetchCourses();
+  // }, []);
 
   return (
     <div className="group">
-      {courses.map((course) => (
+    
         <div
           className="box rounded-[2rem] h-[30rem] w-96 bg-white p-4 transition-all duration-300 ease-in-out  hover:cursor-pointer hover:border "
-          key={course._id}
+          // key={course._id}
         >
           <img
             className="thumb w-full rounded-lg h-60 object-cover"
-            src={getCategoryCoverImage(course.category)}
-            alt={course.courseTitle}
+            src={cover}
+            // alt={course.courseTitle}
           />
 
           <div className="tutor mb-6 mt-4 flex items-center gap-8">
-            {tutors.map((tutor) => {
+            {/* {tutors.map((tutor) => {
               if (tutor._id === course.tutorId) {
-                return (
+                return ( */}
                   <img
-                    key={tutor._id}
+                    // key={tutor._id}
                     className="w-12 h-12 ml-4 mb-[5rem] rounded-full object-cover"
-                    src={tutor.avatar}
-                    alt={tutor.name}
+                    src={avatar}
+                    // alt={tutor.name}
                     onClick={ProfileButtonClick}
                   />
-                );
+                {/* );
               }
               return null;
-            })}
+            })} */}
             <div className="details">
               <h3 className="title text-2xl font-bold capitalize ">
-                {course.courseTitle}
+                {/* {course.courseTitle} */} React
               </h3>
-              <h4 className="text-gray-800 ">{course.tutor.name}</h4>
-              <span className="text-gray-700">{course.uploadedAt}</span>
+              <h4 className="text-gray-800 ">John</h4>
+              <span className="text-gray-700">20-04-2023</span>
 
               <div className=" relative flex flex-row gap-2 top-10 right-10 ">
                 <div>
@@ -114,7 +114,7 @@ const Card = () => {
                     style={{ width: "25px", height: "25px" }}
                   />
                 </div>
-                <h3 className="text-gray-800 ">{course.videoCount} Videos</h3>
+                <h3 className="text-gray-800 "> 5 Videos</h3>
               </div>
 
               <div
@@ -134,7 +134,7 @@ const Card = () => {
             </div>
           </div>
         </div>
-      ))}
+
     </div>
   );
 };

@@ -28,10 +28,10 @@ const Minprofile = () => {
               Adela
             </h4>
             <p className="text-sm mt-3 ml-5 font-normal text-gray-600">
-              Product Manager
+              Designer IO
             </p>
             <p className="text-sm mt-2 ml-5 font-normal text-gray-600">
-              HTML,CSS Developer
+             Java Developer
             </p>
           </div>
 
